@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Systems/views.xml">
+
+    <description>Blohm und Voss BV170 (JSBSim)</description>
+    <author>le PINTO! (FDM/3D/Cockpit), BARANGER Emmanuel (3D), Tobias HENKEL (Texture)</author>
+
+    <rating>
+     <FDM type="int">     2 </FDM>
+     <systems type="int"> 1 </systems>
+     <cockpit type="int"> 2 </cockpit>
+     <model type="int">   4 </model>
+    </rating>
+	
+	<flight-model archive="y">jsb</flight-model>
+    <aero archive="y">bv170-jsbsim</aero>
+	
+	<startup>
+      <splash-texture>Aircraft/BV-170/bv170-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/BV-170/Sounds/bv170-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/BV-170/Models/bv170.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int n="0"    type="int">  0 </int>                                         <!-- 0 immat -->
+        <int n="1"    type="int">  0 </int>                                         <!-- 1 immat -->
+        <int n="2"    type="int">  0 </int>                                         <!-- 2 immat -->
+        <int n="3"    type="int">  0 </int>                                         <!-- 3 immat -->
+        <int n="4"    type="int">  0 </int>                                         <!-- 4 immat -->
+        <int n="5"    type="int">  0 </int>                                         <!-- 5 immat -->
+        <int n="6"    type="bool" alias="controls/smoke"> 0 </int>                  <!-- 6 smoke/bomb/torpedo -->
+        <int n="7"    type="int">  0 </int>                                         <!-- 7 color -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <float n="4"  alias="/engines/engine[0]/rpm"/>
+        <float n="5"  alias="/engines/engine[0]/cranking"/>
+        <float n="6"  alias="/engines/engine[1]/rpm"/>
+        <float n="7"  alias="/engines/engine[1]/cranking"/>
+        <float n="8"  alias="/engines/engine[2]/rpm"/>
+        <float n="9"  alias="/engines/engine[2]/cranking"/>
+        <float n="10"  alias="/gear/gear[0]/wow/"/>
+        <float n="11"  alias="/gear/gear[1]/wow/"/>
+        <float n="12"  alias="/gear/gear[2]/wow/"/>
+        <float n="13"  alias="/gear/gear[3]/wow/"/>
+        <float n="14"  alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="16" alias="/gear/gear[2]/rollspeed-ms"/>
+        <float n="17" alias="/gear/gear[3]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <help include="Systems/help.xml"/>
+
+    <menubar include="Dialogs/bv170-menu.xml"/>
+	
+  </sim>
+
+	<instrumentation>
+		<adf n="0">
+			<power-btn type="bool">true</power-btn>
+			<volume-norm type="double">0</volume-norm>
+			<adf-btn type="bool">true</adf-btn>
+			<mode type="string">adf</mode>
+		</adf>
+		<comm n="0">
+			<power-btn type="bool">true</power-btn>
+			<volume type="double">1.0</volume>
+			<test-btn type="bool">false</test-btn>
+		</comm>
+		<nav n="0">
+			<power-btn type="bool">false</power-btn>
+			<audio-btn type="bool">false</audio-btn>
+			<volume type="double">0</volume>
+		</nav>
+		<transponder>
+			<inputs>
+				<knob-mode type="int">0</knob-mode>
+			</inputs>
+		</transponder>
+	</instrumentation>
+
+	<controls>
+		<gear><brake-parking>1</brake-parking></gear>
+	</controls>
+	
+	<input include="Systems/bv170-keyboard.xml"/>
+	
+	<nasal>
+		<bv170>
+		  <file>Aircraft/BV-170/Nasal/startup.nas</file>
+		  <file>Aircraft/BV-170/Nasal/liveries.nas</file>
+		  <file>Aircraft/BV-170/Nasal/light.nas</file>
+		  <file>Aircraft/BV-170/Nasal/kx165.nas</file>
+		  <file>Aircraft/BV-170/Nasal/brakes.nas</file>
+		  <file>Aircraft/BV-170/Nasal/magnetos.nas</file>
+		  <file>Aircraft/BV-170/Models/Interior/Panel/Instruments/ADF/KR87.nas</file>
+		</bv170>
+	</nasal>
+	<consumables>
+		<fuel>
+			<tank n="0"><name>Left</name></tank>
+			<tank n="1"><name>Center</name></tank>
+			<tank n="2"><name>Right</name></tank>
+		</fuel>
+	</consumables>
+		
+</PropertyList>
+

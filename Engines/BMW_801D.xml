@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!--
+  File:     BMW_801D.xml
+  Author:   AeromatiC++ v 3.3.0
+
+  See: http://wiki.flightgear.org/JSBSim_Engines#FGPiston
+
+  Inputs:
+    name:           BMW_801D
+    type:           Piston Engine
+    power:          1969.93 hp
+-->
+
+<piston_engine name="BMW_801D">
+  <minmp unit="INHG">         10.0 </minmp>
+  <maxmp unit="INHG">         28.5 </maxmp>
+    <displacement unit="IN3"> 3742.86 </displacement>
+  <maxhp>        1969.93 </maxhp>
+  <cycles>         4.0 </cycles>
+  <idlerpm>      700.0 </idlerpm>
+  <maxrpm>      2800.0 </maxrpm>
+  <sparkfaildrop>  0.1 </sparkfaildrop>
+  <volumetric-efficiency> 0.85 </volumetric-efficiency>
+  <man-press-lag> 0.1 </man-press-lag>
+  <static-friction  unit="HP"> 9.84964 </static-friction>
+  <starter-torque> 1575.94 </starter-torque>
+  <starter-rpm> 1400 </starter-rpm>
+ <!-- Defining <bsfc> over-rides the built-in horsepower calculations -->
+ <!--<bsfc>           0.45 </bsfc>-->
+  <stroke unit="IN">  4.375 </stroke>
+  <bore unit="IN">    5.125 </bore>
+  <cylinders>         41  </cylinders>
+  <compression-ratio>  8.0 </compression-ratio>
+</piston_engine>

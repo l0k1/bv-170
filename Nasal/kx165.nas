@@ -1,0 +1,10 @@
+  aircraft.data.add(
+    "instrumentation/comm[0]/volume",
+    "instrumentation/comm[0]/frequencies/selected-mhz",
+    "instrumentation/comm[0]/frequencies/standby-mhz",
+    "instrumentation/comm[0]/test-btn",
+    "instrumentation/nav[0]/audio-btn",
+    "instrumentation/nav[0]/power-btn",
+    "instrumentation/nav[0]/frequencies/selected-mhz",
+    "instrumentation/nav[0]/frequencies/standby-mhz",
+  );

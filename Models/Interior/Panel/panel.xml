@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <!-- put airspeed next to rpm
+  
+		x should be ~.144 (forward/back)
+		y is left/right
+		z is up/down
+  -->
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.167 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/airspeed/airspeed.xml</path>
+    <offsets>
+      <x-m>  0.167 </x-m>
+      <y-m>  0.120 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+    <!-- ALT -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.167 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.030 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- VSI-->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.167 </x-m>
+      <y-m> -0.080 </y-m>
+      <z-m> -0.030 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- COMPASS -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.167 </x-m>
+      <y-m> -0.080 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/throttle/throttle1.xml</path>
+    <offsets>
+      <x-m> 0.167 </x-m>
+      <y-m> 0.180 </y-m>
+      <z-m> 0.045 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/throttle/throttle2.xml</path>
+    <offsets>
+      <x-m> 0.167 </x-m>
+      <y-m> 0.240 </y-m>
+      <z-m> 0.045 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/throttle/throttle3.xml</path>
+    <offsets>
+      <x-m> 0.167 </x-m>
+      <y-m> 0.300 </y-m>
+      <z-m> 0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FUEL -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/fuel/fuel1.xml</path>
+    <offsets>
+      <x-m> 0.168 </x-m>
+      <y-m> 0.180 </y-m>
+      <z-m>-0.010 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/fuel/fuel2.xml</path>
+    <offsets>
+      <x-m> 0.168 </x-m>
+      <y-m> 0.240 </y-m>
+      <z-m>-0.010 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/fuel/fuel3.xml</path>
+    <offsets>
+      <x-m> 0.168 </x-m>
+      <y-m> 0.300 </y-m>
+      <z-m>-0.010 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- GEAR -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/gear/gear.xml</path>
+    <offsets>
+      <x-m> 0.164 </x-m>
+      <y-m> 0.380 </y-m>
+      <z-m> 0.012 </z-m>
+    </offsets>
+  </model>
+
+  <!-- NITRO
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/nitro/nitro.xml</path>
+    <offsets>
+      <x-m>  0.144 </x-m>
+      <y-m> -0.171 </y-m>
+      <z-m> -0.080 </z-m>
+    </offsets>
+  </model> -->
+
+  <!-- FLAPS -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/flaps/flaps.xml</path>
+    <offsets>
+      <x-m>  0.14356 </x-m>
+      <y-m>  0.37000 </y-m>
+      <z-m> -0.09894 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KABIN
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/kabin/kabin.xml</path>
+    <offsets>
+      <x-m>  0.14221 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.104193 </z-m>
+    </offsets>
+  </model>  -->
+
+  <!-- Divers -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/Divers/all-divers.xml</path>
+  </model>
+
+  <!-- Clock -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m>  0.167 </x-m>
+      <y-m> -0.320 </y-m>
+      <z-m>  0.050 </z-m>
+    </offsets>
+  </model>
+  
+    <!-- Radios -->
+
+  <!-- KI206 VOR-->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/ki206/ki206.xml</path>
+    <offsets>
+      <x-m>  0.170 </x-m>
+      <y-m> -0.250 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+  <!-- ADF-->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/ADF/KI-227.xml</path>
+    <offsets>
+      <x-m>  0.171 </x-m>
+      <y-m> -0.160 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KR87 ADF receiver -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/ADF/BendixKing_KR87.xml</path>
+    <offsets>
+      <x-m> 0.168 </x-m>
+      <y-m>-0.275 </y-m>
+      <z-m>-0.075 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KX165 NavComm-->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/kx165/kx165-1.xml</path>
+    <offsets>
+      <x-m> 0.162 </x-m>
+      <y-m>-0.275 </y-m>
+      <z-m>-0.025 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KT70 Transponder-->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/KT76A/KT76A.xml</path>
+    <offsets>
+      <x-m> 0.162 </x-m>
+      <y-m>-0.275 </y-m>
+      <z-m>-0.115 </z-m>
+    </offsets>
+  </model>
+
+  <!-- switches -->
+  
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/switches/engine0.xml</path>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/switches/engine1.xml</path>
+  </model>
+  
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/switches/engine2.xml</path>
+  </model>
+  
+</PropertyList>
+

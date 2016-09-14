@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel2.ac</path>
+
+  <!-- put airspeed next to rpm
+  
+		x should be ~.144 (forward/back)
+		y is left/right
+		z is up/down
+  -->
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel2</object-name>
+    <!-- Objets transparents -->
+  </animation>
+  
+<!--  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Panel2Instruments/magneto/magneto.xml</path>
+    <offsets>
+      <x-m> 0.2 </x-m>
+      <y-m> 0.200 </y-m>
+      <z-m> 0.2 </z-m>
+    </offsets>
+  </model>-->
+</PropertyList>
+

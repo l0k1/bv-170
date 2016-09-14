@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<!-- If you're interested in the code that disables the menu; search for autopilotDisableProps in $FG_ROOT/Nasal/gui.nas. -->
+	<!-- check for /autopilot/hide-menu -->
+	<!-- in startup.nas, remove the fdm change, and set /sim/freeze/fuel to true 
+	
+	<gear>
+  <brake-parking type="double">1.0</brake-parking>
+</gear>-->
+
+	<pid-controller>
+		<name>Roll Hold</name>
+		<debug>false</debug>
+		<enable>
+			<prop>/autopilot/locks/heading</prop>
+			<value>wing-leveler</value>
+		</enable>
+		<input>
+			<prop>/orientation/roll-deg</prop>
+		</input>
+		<reference>autopilot/settings/target-roll-deg</reference> <!-- need to set this property when the roll hold switch is thrown, and modify it with a trim knob. -->
+		<output>
+			<prop>/controls/flight/aileron</prop>
+		</output>
+		<config>
+			<Kp>0.005</Kp> <!-- adjusts speed of response - make negative to have response opposite. start at .005 and increase by .005 until happy. -->
+			<Ti>100.0</Ti> <!-- adjusts stability(?) - start at100, and divide by 10. if unstable, multiply by 2. repeat as necessary. -->
+			<Td>0.0</Td>
+			<u_min>-1.0</u_min>
+			<u_max>1.0</u_max>
+		</config>
+	</pid-controller>
+	
+	<pid-controller>
+		<name>Pitch Hold</name>
+		<debug>false</debug>
+		<enable>
+			<!-- need to find the right <prop> and <value> here. -->
+			<prop>/autopilot/locks/altitude</prop>  
+			<value>pitch-hold</value>
+		</enable>
+		<input>
+			<prop>/orientation/pitch-deg</prop>
+		</input>
+		<reference>/autopilot/settings/target-pitch-deg</reference> <!-- need to set this property when the pitch hold switch is thrown, and modify it with a trim knob. -->
+		<output>
+			<prop>/autopilot/internal/elevator-cmd</prop>
+		</output>
+		<config>
+			<Kp>0.005</Kp> <!-- adjusts speed of response - make negative to have response opposite. start at .005 and increase by .005 until happy. -->
+			<Ti>100.0</Ti> <!-- adjusts stability(?) - start at100, and divide by 10. if unstable, multiply by 2. repeat as necessary. -->
+			<Td>0.0</Td>
+			<u_min>-1.0</u_min>
+			<u_max>1.0</u_max>
+		</config>
+	</pid-controller>
+	
+</PropertyList>

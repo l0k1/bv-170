@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/switches/engine0_starter.xml</path>
+    <offsets>
+      <x-m> 0.167 </x-m>
+      <y-m> 0.181 </y-m>
+      <z-m>-0.070 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/switches/engine0_mag0.xml</path>
+    <offsets>
+      <x-m> 0.168 </x-m>
+      <y-m> 0.166 </y-m>
+      <z-m>-0.050 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/switches/engine0_mag1.xml</path>
+    <offsets>
+      <x-m> 0.168 </x-m>
+      <y-m> 0.196 </y-m>
+      <z-m>-0.050 </z-m>
+    </offsets>
+  </model>
+
+ <!-- <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/switches/engine0_fuelpump.xml</path>
+    <offsets>
+      <x-m> 0.172 </x-m>
+      <y-m> 0.175 </y-m>
+      <z-m>-0.115 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/switches/engine0_alternator.xml</path>
+    <offsets>
+      <x-m> 0.172 </x-m>
+      <y-m> 0.175 </y-m>
+      <z-m>-0.115 </z-m>
+    </offsets>
+  </model> -->
+
+</PropertyList>

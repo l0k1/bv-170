@@ -1,0 +1,164 @@
+ <!-- 
+ 
+components have the following attribs:
+name (must be unique)
+type (must be one of: battery, alternator, external, output)
+volts (required for suppliers)
+property 1 ... property n (1 required) - propertytree reference for this component
+source-property (required for alternator types)
+source-min (required for alternator type)
+
+connectors
+input
+output
+switch 1 ... switch n (all optional) - propertytree reference that must be true for power to input -> output (all switches must be on for power to be applied)
+scheme (optional - don't use)
+factor (optional) name (optional) (don't use)
+connectors for suppliers to buses should be defined first, followed by bus to bus connections, and finally by bus to end-user outputs. In this way, voltage propagates from suppliers to buses and then to end-user outputs
+ -->
+ 
+ <!-- example for the following map:
+   Alternator          Battery
+       |                  |
+     switch             switch
+       |                  |
+       +------------------+
+                |                  +-- Turn Coordinator
+           Primary Bus ------------|
+                |                  +-- Flaps
+    +-----------+------------+
+    |           |            |
+  switch      switch       switch 
+    |           |            |
+ Starter Landing Lights Panel Lights
+ 
+ <systems include="Systems/electrical_config.xml">
+</systems>
+ 
+ -->
+ 
+ 
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<electrical>
+
+  <path></path> <!-- Important: clear the path to disable the default Flightgear system -->
+
+  <!-- Components -->
+
+  <component>
+    <kind type="string">battery</kind>
+    <name type="string">Battery</name>
+    <volts type="float">24</volts>
+    <prop type="string">/systems/electrical/suppliers/battery[0]</prop>
+  </component>
+
+  <component>
+    <kind type="string">alternator</kind>
+    <name type="string">Alternator0</name>
+    <volts type="float">28</volts>
+    <prop type="string">/systems/electrical/suppliers/alternator[0]</prop>
+    <source-prop type="string">/engines/engine[0]/rpm</source-prop>
+    <source-min type="float">800</source-min>
+  </component>
+  <component>
+    <kind type="string">alternator</kind>
+    <name type="string">Alternator1</name>
+    <volts type="float">28</volts>
+    <prop type="string">/systems/electrical/suppliers/alternator[1]</prop>
+    <source-prop type="string">/engines/engine[1]/rpm</source-prop>
+    <source-min type="float">800</source-min>
+  </component>
+  <component>
+    <kind type="string">alternator</kind>
+    <name type="string">Alternator2</name>
+    <volts type="float">28</volts>
+    <prop type="string">/systems/electrical/suppliers/alternator[2]</prop>
+    <source-prop type="string">/engines/engine[2]/rpm</source-prop>
+    <source-min type="float">800</source-min>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Primary Bus</name>
+    <prop type="string">/systems/electrical/outputs/bus-dc</prop>
+    <prop type="string">/systems/electrical/outputs/turn-coordinator</prop>
+    <prop type="string">/systems/electrical/outputs/flaps</prop>
+  </component>
+
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starter0</name>
+    <prop type="string">/systems/electrical/outputs/starter[0]</prop>
+  </component>
+
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starter1</name>
+    <prop type="string">/systems/electrical/outputs/starter[1]</prop>
+  </component>
+
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starter2</name>
+    <prop type="string">/systems/electrical/outputs/starter[2]</prop>
+  </component>  
+
+  <!-- Connectors -->
+
+  <connector>
+    <input type="string">Battery</input>
+    <output type="string">Primary Bus</output>
+    <switch type="string">/controls/switches/battery</switch>
+  </connector>
+
+  <connector>
+    <input type="string">Alternator0</input>
+    <output type="string">Primary Bus</output>
+    <switch type="string">/controls/switches/alternator0</switch>
+  </connector>
+  
+   <connector>
+    <input type="string">Alternator1</input>
+    <output type="string">Primary Bus</output>
+    <switch type="string">/controls/switches/alternator1</switch>
+  </connector>
+  
+   <connector>
+    <input type="string">Alternator2</input>
+    <output type="string">Primary Bus</output>
+    <switch type="string">/controls/switches/alternator2</switch>
+  </connector>
+
+  <connector>
+    <input type="string">Primary Bus</input>
+    <output type="string">Starter0</output>
+    <switch type="string">/controls/engines/engine[0]/starter</switch>
+  </connector>
+
+  <connector>
+    <input type="string">Primary Bus</input>
+    <output type="string">Starter1</output>
+    <switch type="string">/controls/engines/engine[1]/starter</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Primary Bus</input>
+    <output type="string">Starter2</output>
+    <switch type="string">/controls/engines/engine[2]/starter</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Primary Bus</input>
+    <output type="string">Panel Lights</output>
+    <switch type="string">/controls/lighting/panel-norm</switch>
+  </connector>
+
+</electrical>
+
+</PropertyList>
+
+  
+  
